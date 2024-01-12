@@ -1,135 +1,227 @@
+@font-face {
+   font-family: "Mondwest";
+   src: url("./fonts/Mondwest-Regular.ttf");
+}
+
+@font-face {
+   font-family: "Offbit";
+   src: url("./fonts/OffBit-101Bold.ttf");
+}
+
+@font-face {
+   font-family: "Antique Legacy Regular";
+   src: url("./fonts/Antique-Legacy-Regular.otf");
+}
+
+@font-face {
+   font-family: "Antique Legacy Light";
+   src: url("./fonts/Antique-Legacy-Light.otf");
+}
+
 /* --global-- */
 :root {
    --white: #fff;
-   --blueberry: #050542;
-   --turquoise: #66e5bf;
-   --lavender: #a675f5;
-   --attention: #050542;
-   --attention-background: #05054233;
-   --call-to-action: #fffc86;
-   --rounded: .4rem;
-   --pilled: 1.4rem;
-   --shadow: .3rem;
-   --border: .15rem;
+   --black: #000000;
+   --blue: #0064FF;
 }
+
 * {
    box-sizing: border-box;
-}
-body{
-   margin: 1rem; 
+   margin: 0;
    padding: 0;
+}
+
+body{
    font-family: "Open Sans", sans-serif;
    font-size: 1.2rem;
    line-height: 1.4;
-   background: var(--blueberry);
+   background: var(--black);
    color: var(--white);
 }
-h1{
 
+header {
+   padding: 2rem 0 0 2rem;
 }
+
+.logo {
+   width: 96px;
+   height: 27px;
+}
+
+h1{
+   line-height: 95%; 
+   text-transform: uppercase;
+}
+
 h2{
    font-size: 2rem;
    font-weight: 400;
 }
+
+h3{
+   color: var(--blue);
+   font-family: 'Antique Legacy Light';
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 140%;
+   transition: font-size .25s linear; 
+   -o-transition: font-size .25s linear; 
+   -moz-transition: font-size .25s linear; 
+   -webkit-transition: font-size .25s linear; 
+}
+
+li, .par-small{
+   color: var(--white);
+   font-family: 'Antique Legacy Light';
+   font-size: 18px;
+   font-style: light;
+   font-weight: 300;
+   line-height: 156%;
+}
+
+.par-large{
+   color: var(--white);
+   font-family: 'Antique Legacy Light';
+   font-size: 36px;
+   font-weight: 300;
+   line-height: 125%;
+}
+
 ul{
    list-style: none;
-   padding: 0;
 }
-ol{
-   list-style: none;
+
+li::before{
+   content:url('/images/ellipse-2.svg');
+   display: inline-flex;
+   padding-right: 20px;
+   vertical-align: middle;
 }
-a{
-   color: var(--turquoise);
-}
-a:hover, a:active{
-   background: var(--turquoise);
-   color: var(--blueberry)
-}
+
 
 /* SECTIONS */
-section, footer{
-   padding: 1rem;
-   margin-bottom: 2rem;
+section {
+   padding: 2rem;
+   margin-bottom: 1rem;
+   display: inline-flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 32px;
+   max-width: 550px;
+   transition: all .25s linear; 
+   -o-transition: all .25s linear; 
+   -moz-transition: all .25s linear; 
+   -webkit-transition: all .25s linear; 
 }
-nav{
-
-}
-nav h2{
-
-}
-#intro{
-   max-width: 40rem;
-}
-#gedragscriteria{
-   max-width: 25rem;
-}
-#leertaken{
-   max-width: 25rem;
-}
-#leertaken ul{
-   list-style: disc;
-   padding-left: 1rem;;
-}
-#sprintplanning{
-
-}
-#sprintplanning th,#sprintplanning td{
-   background: var(--turquoise);
-   color: var(--blueberry);
-   display: inline-block;
-   width: 100%;
-   padding: 0.5rem;
-}
-footer{
-
-}
-
-
 
 /* CLASSES */
-.green-on-blue{
-   background: var(--turquoise);
-   color: var(--blueberry);
-}
-.green-line-on-blue{
-   /* background: var(--turquoise); */
-   border: solid var(--turquoise) var(--border);
-   color: var(--turquoise);
-}
-.white-line-on-blue{
-   /* background: var(--turquoise); */
-   border: solid var(--white) var(--border);
-   color: var(--white);
-}
-.white-line-on-blue a{
-   color: var(--white);
-}
-.purple-on-blue{
-   background: var(--lavender);
-   color: var(--blueberry);
-}
-.active{
-   background: var(--call-to-action);
-   color: var(--blueberry);
-}
-.rounded{
-   border-radius: var(--rounded);
-  }
-.pilled{
- border-radius: var(--pilled);
-}
-.shadow{
-   box-shadow: var(--shadow) var(--shadow);
-  }
 
-  /* MEDIA QUERIES */
-@media (min-width: 45rem){
-   body{
-      /* background: pink; */
+.white-sans{
+   color: var(--white);
+   font-family: 'Antique Legacy Regular';
+   font-size: 64px;
+   font-weight: 400;
+   transition: font-size .25s linear; 
+   -o-transition: font-size .25s linear; 
+   -moz-transition: font-size .25s linear; 
+   -webkit-transition: font-size .25s linear; 
+}
+
+.blue-offbit{
+   color: var(--blue);
+   font-family: 'OffBit';
+   font-size: 68px;
+   font-weight: 700;
+   letter-spacing: 4.08px;
+   transition: font-size .25s linear; 
+   -o-transition: font-size .25s linear; 
+   -moz-transition: font-size .25s linear; 
+   -webkit-transition: font-size .25s linear; 
+}
+
+.blue-mondwest{
+   color: var(--blue);
+   font-family: 'Mondwest';
+   font-size: 70px;
+   font-weight: 400;
+   line-height: 82%;
+   transition: font-size .25s linear; 
+   -o-transition: font-size .25s linear; 
+   -moz-transition: font-size .25s linear; 
+   -webkit-transition: font-size .25s linear; 
+}
+
+.details{
+   line-height: 140%; /* 33.6px */
+}
+
+.interior-images{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+   gap: 21px;
+}
+
+.interior-images img{
+   width: 100vw;
+}
+
+/* MEDIA QUERIES */
+
+/* BREAKPOINT 1 */
+
+@media (min-width: 50em) {
+   .white-sans{
+      font-size: 91px;
    }
-   #gedragscriteria, #leertaken{
-      display: inline-block;
-      width: 48%;
-      vertical-align: top;
+   .blue-offbit{
+      font-size: 94px;
+   }
+   .blue-mondwest{
+      font-size: 94px;
+   }
+   section{
+      max-width: 760px;
    }
 }
+
+ /* BREAKPOINT 2 */
+
+ @media (min-width: 85em) {
+   .white-sans{
+      font-size: 120px;
+   }
+   .blue-offbit{
+      font-size: 122px;
+   }
+   .blue-mondwest{
+      font-size: 122px;
+   }
+   section{
+      max-width: 1000px;
+   }
+   p{
+      font-size: 20px;
+   }
+   h3{
+      font-size: 26px;
+   }
+   .interior-images {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+   }
+      
+   .green-space { 
+      grid-area: 1 / 1 / 5 / 3; 
+   }
+   .pink-space { 
+      grid-area: 1 / 3 / 3 / 4; 
+   }
+   .beige-space { 
+      grid-area: 3 / 3 / 5 / 4; 
+   }
+ }
