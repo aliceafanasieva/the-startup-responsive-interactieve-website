@@ -40,7 +40,7 @@ body{
 }
 
 header {
-   padding: 2rem 0 0 2rem;
+   padding: 2rem 0 2rem 1rem;
 }
 
 .logo {
@@ -60,6 +60,7 @@ h2{
 
 h3{
    color: var(--blue);
+   padding-bottom: 1rem;
    font-family: 'Antique Legacy Light';
    font-size: 24px;
    font-style: normal;
@@ -88,21 +89,20 @@ li, .par-small{
    line-height: 125%;
 }
 
-ul{
-   list-style: none;
+li{
+   margin-left: 1.5rem;
+   padding-inline-start: 1rem;
 }
 
-li::before{
-   content:url('../images/ellipse-2.svg');
-   display: inline-flex;
-   padding-right: 20px;
-   vertical-align: middle;
-}
+li::marker {
+   color: var(--blue);
+   font-size: 1rem;
+ }
 
 
 /* SECTIONS */
 section {
-   padding: 2rem;
+   padding: 1rem;
    margin-bottom: 1rem;
    display: inline-flex;
    flex-direction: column;
@@ -156,72 +156,134 @@ section {
    line-height: 140%; /* 33.6px */
 }
 
-.interior-images{
+.gallery{
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
    gap: 21px;
 }
 
-.interior-images img{
+.gallery img{
    width: 100vw;
+}
+
+.buttons-container{
+   display: inline-flex;
+   gap: 2em;
 }
 
 /* MEDIA QUERIES */
 
 /* BREAKPOINT 1 */
 
-@media (min-width: 50em) {
-   .white-sans{
-      font-size: 91px;
+@media (min-width: 45em) {
+   *{
+      padding: 0;
+      margin: 0;
    }
-   .blue-offbit{
-      font-size: 94px;
+   header {
+      padding: 2rem 0 2rem 0;
    }
-   .blue-mondwest{
-      font-size: 94px;
+   body{
+      padding: 2rem 4rem 2rem 4rem;
    }
    section{
       max-width: 760px;
+      padding: 2rem 0 2rem 0;
+   }
+   .white-sans, .blue-offbit, .blue-mondwest {
+      font-size: 94px;
+   }
+   .par-large{
+      font-size: 44px;
+   }
+   li::marker {
+      font-size: 1.5rem;
+    }
+   .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(10, 9rem);
+      gap: 0;
+   }
+   .gallery img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   .big-image {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 8;
+      padding-bottom: 2rem;
+    }
+   .small-image-one {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 8;
+      grid-row-end: 11;
+   }
+   .small-image-two {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 8;
+      grid-row-end: 11;
+      padding-left: 2rem;
    }
 }
 
  /* BREAKPOINT 2 */
 
- @media (min-width: 85em) {
-   .white-sans{
-      font-size: 120px;
-   }
-   .blue-offbit{
+ @media (min-width: 75em) {
+   .white-sans, .blue-offbit, .blue-mondwest {
       font-size: 122px;
-   }
-   .blue-mondwest{
-      font-size: 122px;
-   }
+   }  
    section{
       max-width: 1000px;
    }
-   p{
-      font-size: 20px;
+   li, .par-small{
+      font-size: 23px;
+   }
+   .par-large{
+      font-size: 64px;
    }
    h3{
       font-size: 26px;
    }
-   .interior-images {
+   li::marker {
+      font-size: 2rem;
+    }
+   .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 200px);
-      grid-template-rows: repeat(4, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(8, 7rem);
+      gap: 2rem;
    }
-      
-   .green-space { 
-      grid-area: 1 / 1 / 5 / 3; 
+   .gallery img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
    }
-   .pink-space { 
-      grid-area: 1 / 3 / 3 / 4; 
+   .big-image {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 8;
+      padding-bottom: 0;
+    }
+   .small-image-one {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 4;
+      padding-left: 0;
    }
-   .beige-space { 
-      grid-area: 3 / 3 / 5 / 4; 
+   .small-image-two{
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 4;
+      grid-row-end: 7;
+      padding-left: 0;
    }
  }
