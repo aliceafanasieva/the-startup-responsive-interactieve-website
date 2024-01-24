@@ -214,6 +214,10 @@ button p{
    border-radius: 48px;
  }
 
+.square-button::before {
+   border-radius: 0px;
+}
+
 /* STYLING THE MODAL (POP UP */
 .modal{
    position: fixed;
