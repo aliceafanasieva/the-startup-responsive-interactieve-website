@@ -2,133 +2,136 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="description" content=""/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"/>
-    <link rel="stylesheet" href="styles/style.css">
-    <meta http-equiv="content-security-policy" content="">
+    <meta content="" name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+          rel="stylesheet"/>
+    <link href="styles/style.css" rel="stylesheet">
+    <meta content="" http-equiv="content-security-policy">
     <title>JUST | Invitation</title>
 </head>
 <body>
 
-    <header>
-        <img class="logo" src="images/vectorlogo.png" alt="logo of the JUST" />
-    </header>
-    
-    <main>
-        <section>
-            <div class="title">
-                <h1 class="white-sans">Save the date!</h1>
-                <h1 class="blue-off-bit">7 March</h1>
-            </div>
-            <p class="par-small">
-                We are thrilled to finally share this invitation with
-                you for the grand opening celebration of our brand-new
-                studio in The Hague.  
-            </p>
-            <div class="details">
-                <h3>Details</h3>
-                <ul class="details">
-                    <li>Westeinde 24D, The Hague</li>
-                    <li>Doors open at 18:00</li>
-                    <li>Come with an empty stomach.</li>
-                    <li>More info coming soon.</li>
-                </ul>
-            </div>
-        </section>
+<header>
+    <img alt="logo of the JUST" class="logo" src="images/vectorlogo.png"/>
+</header>
 
-        <!-- IMAGE GALLERY -->
-        <div class="gallery">
-            <img src="images/IMG_8678.jpeg" class="big-image" alt="The meeting room of the new studio
-            of JUST with green-painted walls and a large round window in the front" />
-            <img src="images/IMG_4473.jpeg" class="small-image-one" alt="Appearance of the studio during the renovation" />
-            <img src="images/pinkroom.png" class="small-image-two" alt="Steps of the pink painted staircase" />
+<main>
+    <section>
+        <div class="title">
+            <h1 class="white-sans">Save the date!</h1>
+            <h1 class="blue-off-bit">7 March</h1>
         </div>
+        <p class="par-small">
+            We are thrilled to finally share this invitation with
+            you for the grand opening celebration of our brand-new
+            studio in The Hague.
+        </p>
+        <div class="details">
+            <h3>Details</h3>
+            <ul class="details">
+                <li>Westeinde 24D, The Hague</li>
+                <li>Doors open at 18:00</li>
+                <li>Come with an empty stomach.</li>
+                <li>More info coming soon.</li>
+            </ul>
+        </div>
+    </section>
 
-        <section>
-            <p class="par-large">Expect a lot of champagne popping,
+    <!-- IMAGE GALLERY -->
+    <div class="gallery">
+        <img alt="The meeting room of the new studio
+            of JUST with green-painted walls and a large round window in the front" class="big-image" src="images/IMG_8678.jpeg"/>
+        <img alt="Appearance of the studio during the renovation" class="small-image-one" src="images/IMG_4473.jpeg"/>
+        <img alt="Steps of the pink painted staircase" class="small-image-two" src="images/pinkroom.png"/>
+    </div>
+
+    <section>
+        <p class="par-large">Expect a lot of champagne popping,
             good music, amazing food, nice people and last but not least
             a beautiful venue.</p>
 
-            <div class="title">
-                <h1 class="white-sans">Are you in for</h1>
-                <h1 class="blue-mondwest">some fun?</h1>
-            </div>
+        <div class="title">
+            <h1 class="white-sans">Are you in for</h1>
+            <h1 class="blue-mondwest">some fun?</h1>
+        </div>
 
-            <p class="par-small">
-                Please let us know before February 8 if you are joining us. 
-            </p>
+        <p class="par-small">
+            Please let us know before February 8 if you are joining us.
+        </p>
 
-            <!-- BUTTONS TO OPEN MODALS -->
-            <div class="buttons-container">
-                <button class="modal-opening" data-modal-target="#modal">
-                    <span class="par-small">Be there</span>
-                </button>
-                <p class="par-small">Or</p>
-                <button class="modal-opening square-button" data-modal-target="#besquare-modal">
-                    <span class="par-small">Be square</span>
-                </button>
-            </div>
+        <!-- BUTTONS TO OPEN MODALS -->
+        <div class="buttons-container">
+            <button class="modal-opening" data-modal-target="#modal">
+                <span class="par-small">Be there</span>
+            </button>
+            <p class="par-small">Or</p>
+            <button class="modal-opening square-button" data-modal-target="#besquare-modal">
+                <span class="par-small">Be square</span>
+            </button>
+        </div>
 
-            <!-- BE THERE MODAL -->
-            <div class="modal" id="modal">
+        <!-- BE THERE MODAL -->
+        <div class="modal" id="modal">
 
-                <button data-close-button class="button-close">Close &times;</button>
+            <button class="button-close" data-close-button>Close &times;</button>
 
-                <div class="modal-content">
-                    <p>Awesome! Please fill in the form</p>
+            <div class="modal-content">
+                <p>Awesome! Please fill in the form</p>
 
-                    <form id="myForm" onsubmit="return validateForm()">
-                        <div class="form-item">
-                            <div>
-                                <label for="firstName">Firstname</label>
-                                <input type="text" id="firstName" name="fistName" placeholder="Firstname" required>
-                                <div class="error-message" id="firstNameError"></div>
-                            </div>
-                            <div>
-                                <label for="surName">Surname</label>
-                                <input type="text" id="surName" name="surname" placeholder="Surname" >
-                                <div class="error-message" id="surnameError"></div>
-                            </div>
+                <form id="myForm" onsubmit="return validateForm()">
+                    <div class="form-item">
+                        <div>
+                            <label for="firstName">Firstname</label>
+                            <input id="firstName" name="fistName" placeholder="Firstname" required type="text">
+                            <div class="error-message" id="firstNameError"></div>
                         </div>
-
-                        <div class="form-item">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="mail@gmail.com">
-                            <div class="error-message" id="emailError"></div>
+                        <div>
+                            <label for="surName">Surname</label>
+                            <input id="surName" name="surname" placeholder="Surname" type="text">
+                            <div class="error-message" id="surnameError"></div>
                         </div>
-                        <div class="form-item">
-                            <label>How many people?</label>
-                            <ul class="radio-buttons">
-                                <li><input type="radio" id="onePerson" name="people" value="1">
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" placeholder="mail@gmail.com" type="email">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-item">
+                        <label>How many people?</label>
+                        <ul class="radio-buttons">
+                            <li><input id="onePerson" name="people" type="radio" value="1">
                                 <label for="onePerson">1</label></li>
-                                <li><input type="radio" id="twoPeople" name="people" value="2">
+                            <li><input id="twoPeople" name="people" type="radio" value="2">
                                 <label for="twoPeople">2</label></li>
-                                <li><input type="radio" id="threePeople" name="people" value="3">
+                            <li><input id="threePeople" name="people" type="radio" value="3">
                                 <label for="threePeople">3</label></li>
-                                <li><input type="radio" id="fourPeople" name="people" value="4">
-                                <label for="fourPeople">4</label></li></ul>
-                            <div class="error-message" id="peopleError"></div>
-                        </div>
-                        <div class="form-item">
-                            <label for="dietaryRequirements">Do you have any dietary requirements?</label>
-                            <input type="text" id="dietaryRequirements" name="dietaryRequirements" placeholder="Vegan, vegetarian, allergies">
-                        </div>
-                        <button type="submit">Save</button>
-                    </form>
-
-                </div>
+                            <li><input id="fourPeople" name="people" type="radio" value="4">
+                                <label for="fourPeople">4</label></li>
+                        </ul>
+                        <div class="error-message" id="peopleError"></div>
+                    </div>
+                    <div class="form-item">
+                        <label for="dietaryRequirements">Do you have any dietary requirements?</label>
+                        <input id="dietaryRequirements" name="dietaryRequirements" placeholder="Vegan, vegetarian, allergies"
+                               type="text">
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
 
             </div>
 
-            <!-- BE SQUARE MODAL -->
-            <div class="modal" id="besquare-modal">
-            </div>
+        </div>
 
-        </section>
-    </main>
+        <!-- BE SQUARE MODAL -->
+        <div class="modal" id="besquare-modal">
+        </div>
 
-    <script src="script.js"></script>
+    </section>
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>

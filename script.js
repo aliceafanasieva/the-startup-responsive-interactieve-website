@@ -3,21 +3,19 @@ function validateForm() {
     var surName = document.getElementById('surName').value;
     var email = document.getElementById('email').value;
     var people = document.querySelector('input[name="people"]:checked');
-    
+
     // Validation for the name
     if (firstName.trim() === '') {
         document.getElementById('firstNameError').innerHTML = '* Firstname is required';
         return false;
-    }
-    else {
+    } else {
         document.getElementById('firstNameError').innerHTML = '';
     }
 
     if (surName.trim() === '') {
         document.getElementById('surnameError').innerHTML = '* Surname is required';
         return false;
-    }
-    else {
+    } else {
         document.getElementById('surnameError').innerHTML = '';
     }
 
@@ -26,8 +24,7 @@ function validateForm() {
     if (!emailRegex.test(email)) {
         document.getElementById('emailError').innerHTML = '* The email is invalid';
         return false;
-    } 
-    else {
+    } else {
         document.getElementById('emailError').innerHTML = '';
     }
 
@@ -35,8 +32,7 @@ function validateForm() {
     if (!people) {
         document.getElementById('peopleError').innerHTML = '* This field is required';
         return false;
-    } 
-    else {
+    } else {
         document.getElementById('peopleError').innerHTML = '';
     }
 
