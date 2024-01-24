@@ -23,7 +23,7 @@
    --white: #fff;
    --black: #000000;
    --blue: #0064FF;
-   --btn-border: 2px solid var(--white);
+   --btn-border: 0.125rem solid var(--white);
 }
 
 * {
@@ -45,8 +45,8 @@ header {
 }
 
 .logo {
-   width: 96px;
-   height: 27px;
+   width: 6rem;
+   height: auto;
 }
 
 h1{
@@ -63,7 +63,7 @@ h3{
    color: var(--blue);
    padding-bottom: 1rem;
    font-family: 'Antique Legacy Light';
-   font-size: 24px;
+   font-size: 1.5rem;
    font-style: normal;
    font-weight: 300;
    line-height: 140%;
@@ -76,7 +76,7 @@ h3{
 li, .par-small{
    color: var(--white);
    font-family: 'Antique Legacy Light';
-   font-size: 18px;
+   font-size: 1.125rem;
    font-style: light;
    font-weight: 300;
    line-height: 156%;
@@ -85,7 +85,7 @@ li, .par-small{
 .par-large{
    color: var(--white);
    font-family: 'Antique Legacy Light';
-   font-size: 36px;
+   font-size: 2.25rem;
    font-weight: 300;
    line-height: 125%;
 }
@@ -108,8 +108,8 @@ section {
    display: inline-flex;
    flex-direction: column;
    align-items: flex-start;
-   gap: 32px;
-   max-width: 550px;
+   gap: 2rem;
+   max-width: 34.375rem;
    transition: all .25s linear; 
    -o-transition: all .25s linear; 
    -moz-transition: all .25s linear; 
@@ -121,7 +121,7 @@ section {
 .white-sans{
    color: var(--white);
    font-family: 'Antique Legacy Regular';
-   font-size: 64px;
+   font-size: 4rem;
    font-weight: 400;
    transition: font-size .25s linear; 
    -o-transition: font-size .25s linear; 
@@ -132,9 +132,9 @@ section {
 .blue-offbit{
    color: var(--blue);
    font-family: 'OffBit';
-   font-size: 68px;
+   font-size: 4.25rem;
    font-weight: 700;
-   letter-spacing: 4.08px;
+   letter-spacing: 0.255rem;
    transition: font-size .25s linear; 
    -o-transition: font-size .25s linear; 
    -moz-transition: font-size .25s linear; 
@@ -144,7 +144,7 @@ section {
 .blue-mondwest{
    color: var(--blue);
    font-family: 'Mondwest';
-   font-size: 70px;
+   font-size: 4.375rem;
    font-weight: 400;
    line-height: 82%;
    transition: font-size .25s linear; 
@@ -154,14 +154,14 @@ section {
 }
 
 .details{
-   line-height: 140%; /* 33.6px */
+   line-height: 140%; /* 2.1rem */
 }
 
 .gallery{
    display: flex;
    flex-wrap: wrap;
    justify-content: flex-start;
-   gap: 21px;
+   gap: 1.313rem;
 }
 
 .gallery img{
@@ -171,7 +171,7 @@ section {
 .buttons-container{
    display: inline-flex;
    align-items: center;
-   gap: 2em;
+   gap: 2rem;
 }
 
 button {
@@ -179,12 +179,16 @@ button {
    text-decoration: none; /* Remove default link underline */
    color: white;
    background-color: transparent;
-   border-width: 0px;
+   border: none;
    cursor: pointer;
  }
 
 button p{
-   border-bottom: 2px solid var(--white);
+   border-bottom: var(--btn-border);
+}
+
+.modal-opening p:hover {
+   border-bottom: 0.125rem solid transparent;
 }
 
 /* STYLING THE BUTTONS THAT WILL OPEN A MODAL */
@@ -291,16 +295,16 @@ form .form-item:first-child {
 }
 
 label {
-   margin: 10px 0;
+   margin: 0.625rem 0;
    display: inline;
-   font-size: 16px;
+   font-size: 1rem;
 }
 
 input, select {
    width: 100%;
-   padding: 8px;
-   margin-top: 5px;
-   margin-bottom: 10px;
+   padding: 0.5rem;
+   margin-top: 0.313rem;
+   margin-bottom: 0.625rem;
    box-sizing: border-box;
 }
 
@@ -320,14 +324,14 @@ input, select {
       padding: 2rem 4rem 2rem 4rem;
    }
    section{
-      max-width: 760px;
+      max-width: 47.5rem;
       padding: 2rem 0 2rem 0;
    }
    .white-sans, .blue-offbit, .blue-mondwest {
-      font-size: 94px;
+      font-size: 5.875rem;
    }
    .par-large{
-      font-size: 44px;
+      font-size: 2.75rem;
    }
    li::marker {
       font-size: 1.5rem;
@@ -369,22 +373,22 @@ input, select {
 
  @media (min-width: 75em) {
    .white-sans, .blue-offbit, .blue-mondwest {
-      font-size: 122px;
+      font-size: 7.625rem;
    }  
    section{
-      max-width: 1000px;
+      max-width: 62.5rem;
    }
    li, .par-small{
-      font-size: 23px;
+      font-size: 1.438rem;
    }
    .par-large{
-      font-size: 64px;
+      font-size: 4rem;
    }
    h3{
-      font-size: 26px;
+      font-size: 1.625rem;
    }
    p{
-      font-size: 20px;
+      font-size: 1.25rem;
    }
    li::marker {
       font-size: 2rem;
