@@ -6,19 +6,19 @@ function validateForm() {
     
     // Validation for the name
     if (firstName.trim() === '') {
-        document.getElementById('nameError').innerHTML = '* Firstname is required';
+        document.getElementById('firstNameError').innerHTML = '* Firstname is required';
         return false;
     }
     else {
-        document.getElementById('nameError').innerHTML = '';
+        document.getElementById('firstNameError').innerHTML = '';
     }
 
     if (surName.trim() === '') {
-        document.getElementById('nameError').innerHTML = '* Surname is required';
+        document.getElementById('surnameError').innerHTML = '* Surname is required';
         return false;
     }
     else {
-        document.getElementById('nameError').innerHTML = '';
+        document.getElementById('surnameError').innerHTML = '';
     }
 
     // Validation for email

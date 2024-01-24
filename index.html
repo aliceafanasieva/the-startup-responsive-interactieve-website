@@ -12,14 +12,14 @@
 <body>
 
     <header>
-        <img class="logo" src="images/vectorlogo.png" alt="logo of the JUST"></img>
+        <img class="logo" src="images/vectorlogo.png" alt="logo of the JUST" />
     </header>
-
+    
     <main>
         <section>
             <div class="title">
                 <h1 class="white-sans">Save the date!</h1>
-                <h1 class="blue-offbit">7 March</h1>
+                <h1 class="blue-off-bit">7 March</h1>
             </div>
             <p class="par-small">
                 We are thrilled to finally share this invitation with
@@ -38,17 +38,17 @@
         </section>
 
         <!-- IMAGE GALLERY -->
-        <container class="gallery">
+        <div class="gallery">
             <img src="images/IMG_8678.jpeg" class="big-image" alt="The meeting room of the new studio
-            of JUST with green-painted walls and a large round window in the front"></img>
-            <img src="images/IMG_4473.jpeg" class="small-image-one" alt="Appearance of the studio during the renovation"></img>
-            <img src="images/pinkroom.png" class="small-image-two" alt="Steps of the pink painted staircase"></img>
-        </container>
+            of JUST with green-painted walls and a large round window in the front" />
+            <img src="images/IMG_4473.jpeg" class="small-image-one" alt="Appearance of the studio during the renovation" />
+            <img src="images/pinkroom.png" class="small-image-two" alt="Steps of the pink painted staircase" />
+        </div>
 
         <section>
             <p class="par-large">Expect a lot of champagne popping,
             good music, amazing food, nice people and last but not least
-            a beautifull venue.</p>
+            a beautiful venue.</p>
 
             <div class="title">
                 <h1 class="white-sans">Are you in for</h1>
@@ -60,15 +60,15 @@
             </p>
 
             <!-- BUTTONS TO OPEN MODALS -->
-            <container class="buttons-container">
-                <button class="modal-opening" data-modal-target="#modal"><span>
-                    <p class="par-small">Be there</p>
-                </span></button>
+            <div class="buttons-container">
+                <button class="modal-opening" data-modal-target="#modal">
+                    <span class="par-small">Be there</span>
+                </button>
                 <p class="par-small">Or</p>
-                <button class="modal-opening square-button" data-modal-target="#besquare-modal"><span>
-                    <p class="par-small">Be square</p>
-                </span></button>
-            </container>
+                <button class="modal-opening square-button" data-modal-target="#besquare-modal">
+                    <span class="par-small">Be square</span>
+                </button>
+            </div>
 
             <!-- BE THERE MODAL -->
             <div class="modal" id="modal">
@@ -83,12 +83,12 @@
                             <div>
                                 <label for="firstName">Firstname</label>
                                 <input type="text" id="firstName" name="fistName" placeholder="Firstname" required>
-                                <div class="error-message" id="nameError"></div>
+                                <div class="error-message" id="firstNameError"></div>
                             </div>
                             <div>
                                 <label for="surName">Surname</label>
-                                <input type="text" id="surName" name="surName" placeholder="Surname" >
-                                <div class="error-message" id="nameError"></div>
+                                <input type="text" id="surName" name="surname" placeholder="Surname" >
+                                <div class="error-message" id="surnameError"></div>
                             </div>
                         </div>
 

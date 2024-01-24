@@ -24,6 +24,8 @@
    --black: #000000;
    --blue: #0064FF;
    --btn-border: 0.125rem solid var(--white);
+   /* FONTS */
+   --sans-font: 'Antique Legacy Light';
 }
 
 * {
@@ -62,7 +64,7 @@ h2{
 h3{
    color: var(--blue);
    padding-bottom: 1rem;
-   font-family: 'Antique Legacy Light';
+   font-family: 'Antique Legacy Light', sans-serif;
    font-size: 1.5rem;
    font-style: normal;
    font-weight: 300;
@@ -75,16 +77,16 @@ h3{
 
 li, .par-small{
    color: var(--white);
-   font-family: 'Antique Legacy Light';
+   font-family: 'Antique Legacy Light', sans-serif;
    font-size: 1.125rem;
-   font-style: light;
+   /*font-style: light;*/
    font-weight: 300;
    line-height: 156%;
 }
 
 .par-large{
    color: var(--white);
-   font-family: 'Antique Legacy Light';
+   font-family: 'Antique Legacy Light', sans-serif;
    font-size: 2.25rem;
    font-weight: 300;
    line-height: 125%;
@@ -122,7 +124,7 @@ section {
 
 .white-sans{
    color: var(--white);
-   font-family: 'Antique Legacy Regular';
+   font-family: 'Antique Legacy Regular', sans-serif;
    font-size: 4rem;
    font-weight: 400;
    transition: font-size .25s linear; 
@@ -131,9 +133,9 @@ section {
    -webkit-transition: font-size .25s linear; 
 }
 
-.blue-offbit{
+.blue-off-bit{
    color: var(--blue);
-   font-family: 'OffBit';
+   font-family: 'OffBit', sans-serif;
    font-size: 4.25rem;
    font-weight: 700;
    letter-spacing: 0.255rem;
@@ -145,7 +147,7 @@ section {
 
 .blue-mondwest{
    color: var(--blue);
-   font-family: 'Mondwest';
+   font-family: 'Mondwest', sans-serif;
    font-size: 4.375rem;
    font-weight: 400;
    line-height: 82%;
@@ -201,7 +203,7 @@ button p{
    right: 0;
    width: 0;
    height: 100%;
-   background: var(--Blue, #0064FF);
+   background: var(--blue, #0064FF);
    border-radius: 48px;
    transition: width 0.3s ease;
  }
@@ -221,7 +223,7 @@ button p{
  }
 
 .square-button::before {
-   border-radius: 0px;
+   border-radius: 0;
 }
 
 /* STYLING THE MODAL (POP UP */
@@ -244,7 +246,7 @@ button p{
 .modal button{
    font-size: 1.2rem;
    border-bottom: var(--btn-border);
-   padding: 0px 0px 5px;
+   padding: 0 0 5px;
 }
 
 .button-close{
@@ -329,7 +331,7 @@ input, select {
       max-width: 47.5rem;
       padding: 2rem 0 2rem 0;
    }
-   .white-sans, .blue-offbit, .blue-mondwest {
+   .white-sans, .blue-off-bit, .blue-mondwest {
       font-size: 5.875rem;
    }
    .par-large{
@@ -374,7 +376,7 @@ input, select {
  /* BREAKPOINT 2 */
 
  @media (min-width: 75em) {
-   .white-sans, .blue-offbit, .blue-mondwest {
+   .white-sans, .blue-off-bit, .blue-mondwest {
       font-size: 7.625rem;
    }  
    section{
