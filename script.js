@@ -1,11 +1,20 @@
 function validateForm() {
-    var fullName = document.getElementById('fullName').value;
+    var firstName = document.getElementById('firstName').value;
+    var surName = document.getElementById('surName').value;
     var email = document.getElementById('email').value;
     var people = document.querySelector('input[name="people"]:checked');
     
-    // Validation for the full name
-    if (fullName.trim() === '') {
-        document.getElementById('nameError').innerHTML = '* Full name is required';
+    // Validation for the name
+    if (firstName.trim() === '') {
+        document.getElementById('nameError').innerHTML = '* Firstname is required';
+        return false;
+    }
+    else {
+        document.getElementById('nameError').innerHTML = '';
+    }
+
+    if (surName.trim() === '') {
+        document.getElementById('nameError').innerHTML = '* Surname is required';
         return false;
     }
     else {

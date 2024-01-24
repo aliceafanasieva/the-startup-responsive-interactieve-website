@@ -264,6 +264,12 @@ button p{
 
 /* FILL IN FORM */
 
+form .form-item:first-child {
+   display: flex;
+   gap: 1rem;
+
+}
+
 .form-item{
    margin-bottom: 1rem;
 }
