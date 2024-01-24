@@ -23,6 +23,7 @@
    --white: #fff;
    --black: #000000;
    --blue: #0064FF;
+   --btn-border: 2px solid var(--white);
 }
 
 * {
@@ -89,12 +90,12 @@ li, .par-small{
    line-height: 125%;
 }
 
-li{
+.details li{
    margin-left: 1.5rem;
    padding-inline-start: 1rem;
 }
 
-li::marker {
+.details li::marker {
    color: var(--blue);
    font-size: 1rem;
  }
@@ -169,7 +170,128 @@ section {
 
 .buttons-container{
    display: inline-flex;
+   align-items: center;
    gap: 2em;
+}
+
+button {
+   position: relative;
+   text-decoration: none; /* Remove default link underline */
+   color: white;
+   background-color: transparent;
+   border-width: 0px;
+   cursor: pointer;
+ }
+
+button p{
+   border-bottom: 2px solid var(--white);
+}
+
+/* STYLING THE BUTTONS THAT WILL OPEN A MODAL */
+.modal-opening::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 100%;
+   background: var(--Blue, #0064FF);
+   border-radius: 48px;
+   transition: width 0.3s ease;
+ }
+
+.modal-opening:hover::before {
+   width: 100%;
+}
+
+.modal-opening span {
+   position: relative;
+   z-index: 1;
+   padding: 20px 32px;
+   display: inline-flex;
+   flex-direction: column;
+   gap: 8px;
+   border-radius: 48px;
+ }
+
+/* STYLING THE MODAL (POP UP */
+.modal{
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) scale(0);
+   transition: 0.2s ease-in-out;
+   height: 100%;
+   width: 100%;
+   z-index: 10;
+   background-color: var(--blue);
+}
+
+.modal.active{
+   transform: translate(-50%, -50%) scale(1);
+}
+
+.modal button{
+   font-size: 1.2rem;
+   border-bottom: var(--btn-border);
+   padding: 0px 0px 5px;
+}
+
+.button-close{
+   position: absolute;
+   right: 1rem;
+   top: 1rem;
+   white-space: nowrap;
+   display: inline-block;
+}
+
+.modal-content{
+   max-width: 400px;
+   top: 50%;
+   left: 50%;
+   position: absolute;
+   transform: translate(-50%, -50%);
+}
+
+.modal-content p{
+   font-size: 20px;
+   margin-bottom: 2rem;
+}
+
+/* FILL IN FORM */
+
+.form-item{
+   margin-bottom: 1rem;
+}
+
+.radio-buttons {
+   overflow: hidden;
+}
+
+.radio-buttons li{
+   display: inline-block;
+   white-space: nowrap;
+   margin-left: 1.5rem;
+   padding-inline-start: 1rem;
+}
+
+.radio-buttons li:nth-child(1){
+   margin-left: 0;
+   padding-inline-start: 0;
+}
+
+label {
+   margin: 10px 0;
+   display: inline;
+   font-size: 16px;
+}
+
+input, select {
+   width: 100%;
+   padding: 8px;
+   margin-top: 5px;
+   margin-bottom: 10px;
+   box-sizing: border-box;
 }
 
 /* MEDIA QUERIES */
@@ -251,13 +373,16 @@ section {
    h3{
       font-size: 26px;
    }
+   p{
+      font-size: 20px;
+   }
    li::marker {
       font-size: 2rem;
     }
    .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(8, 7rem);
+      grid-template-rows: repeat(7, 7rem);
       gap: 2rem;
    }
    .gallery img{

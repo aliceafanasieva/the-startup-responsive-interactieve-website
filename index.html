@@ -28,7 +28,7 @@
             </p>
             <div class="details">
                 <h3>Details</h3>
-                <ul>
+                <ul class="details">
                     <li>Westeinde 24D, The Hague</li>
                     <li>Doors open at 18:00</li>
                     <li>Come with an empty stomach.</li>
@@ -36,36 +36,161 @@
                 </ul>
             </div>
         </section>
+
+        <!-- IMAGE GALLERY -->
         <container class="gallery">
             <img src="images/IMG_8678.jpeg" class="big-image" alt="green-interior"></img>
             <img src="images/IMG_4473.jpeg" class="small-image-one" alt="progress of building"></img>
             <img src="images/pinkroom.png" class="small-image-two" alt="pink staircase"></img>
         </container>
+
         <section>
             <p class="par-large">Expect a lot of champagne popping,
             good music, amazing food, nice people and last but not least
             a beautifull venue.</p>
+
             <div class="title">
                 <h1 class="white-sans">Are you in for</h1>
                 <h1 class="blue-mondwest">some fun?</h1>
             </div>
+
             <p class="par-small">
                 Please let us know before February 8 if you are joining us. 
             </p>
-            <container class="buttons-container">
-                <button>
-                    Be there 
-                </button>
-                <p class="par-small">
-                    Or
-                </p>
-                <button>
-                    Be square 
-                </button>
-            </container>
-        </section>
 
+            <!-- BUTTONS TO OPEN MODALS -->
+            <container class="buttons-container">
+                <button class="modal-opening" data-modal-target="#modal"><span>
+                    <p class="par-small">Be there</p>
+                </span></button>
+                <p class="par-small">Or</p>
+                <button class="modal-opening" data-modal-target="#besquare-modal"><span>
+                    <p class="par-small">Be square</p>
+                </span></button>
+            </container>
+
+            <!-- BE THERE MODAL -->
+            <div class="modal" id="modal">
+
+                <button data-close-button class="button-close">Close &times;</button>
+
+                <div class="modal-content">
+                    <p>Awesome! Please fill in the form</p>
+
+                    <form id="myForm" onsubmit="return validateForm()">
+                        <div class="form-item">
+                            <label for="fullName">First and last name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="First and last name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        <div class="form-item">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="mail@gmail.com">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <div class="form-item">
+                            <label>How many people?</label>
+                            <ul class="radio-buttons">
+                                <li><input type="radio" id="onePerson" name="people" value="1">
+                                <label for="onePerson">1</label></li>
+                                <li><input type="radio" id="twoPeople" name="people" value="2">
+                                <label for="twoPeople">2</label></li>
+                                <li><input type="radio" id="threePeople" name="people" value="3">
+                                <label for="threePeople">3</label></li>
+                                <li><input type="radio" id="fourPeople" name="people" value="4">
+                                <label for="fourPeople">4</label></li></ul>
+                            <div class="error-message" id="peopleError"></div>
+                        </div>
+                        <div class="form-item">
+                            <label for="dietaryRequirements">Do you have any dietary requirements?</label>
+                            <input type="text" id="dietaryRequirements" name="dietaryRequirements" placeholder="Vegan, vegetarian, allergies">
+                        </div>
+                        <button type="submit">Save</button>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- BE SQUARE MODAL -->
+            <div class="modal" id="modal">
+            </div>
+
+        </section>
     </main>
+    
+    <!-- SCRIPT TO MAKE A VALIDATION IN FILL IN FORM -->
+    <script>
+        function validateForm() {
+            var fullName = document.getElementById('fullName').value;
+            var email = document.getElementById('email').value;
+            var people = document.querySelector('input[name="people"]:checked');
+            
+            // Validation for the full name
+            if (fullName.trim() === '') {
+                document.getElementById('nameError').innerHTML = '* Full name is required';
+                return false;
+            }
+            else {
+                document.getElementById('nameError').innerHTML = '';
+            }
+
+            // Validation for email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('emailError').innerHTML = '* The email is invalid';
+                return false;
+            } 
+            else {
+                document.getElementById('emailError').innerHTML = '';
+            }
+
+            // Validation for amount people
+            if (!people) {
+                document.getElementById('peopleError').innerHTML = '* This field is required';
+                return false;
+            } 
+            else {
+                document.getElementById('peopleError').innerHTML = '';
+            }
+
+            // If all validations pass, you can submit the form
+            alert('Form submitted successfully!');
+            return true;
+        }
+    </script>
+
+    <!-- SCRIPT TO MAKE A MODAL INTERACTION -->
+    <script>
+        const openModalButtons = document.querySelectorAll('[data-modal-target]');
+        const closeModalButtons = document.querySelectorAll('[data-close-button]');
+
+        openModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector(button.dataset.modalTarget);
+                openModal(modal);
+            });
+        });
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal');
+                closeModal(modal);
+            });
+        });
+
+        function openModal(modal) {
+            if (modal == null) return;
+            modal.classList.add('active');
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return;
+            modal.classList.remove('active');
+        }
+    </script>
+
+
 
 </body>
 </html>
