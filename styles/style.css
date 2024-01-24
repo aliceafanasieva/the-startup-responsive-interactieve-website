@@ -91,13 +91,15 @@ li, .par-small{
 }
 
 .details li{
-   margin-left: 1.5rem;
-   padding-inline-start: 1rem;
+   list-style: none;
 }
 
-.details li::marker {
+.details li::before{
    color: var(--blue);
-   font-size: 1rem;
+   content: "\2022";
+   display: inline-block;
+   font-size: 2rem;
+   width: 2rem;
  }
 
 
