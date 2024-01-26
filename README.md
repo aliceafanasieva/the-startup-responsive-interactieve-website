@@ -1,4 +1,4 @@
-# Uitnodigingspagina Just
+# Uitnodigingswebsite Just
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
