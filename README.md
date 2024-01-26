@@ -29,6 +29,7 @@ Link naar mijn GitHub pages: https://aliceafanasieva.github.io/the-startup-respo
 
 De website is gebouwd met HTML, CSS en JS. Het werd op de Mobile First manier gemaakt, ik begon eerst met alle layout, sections, headers etc. en vervolgens begon met grid maken voor de gallerij (drie plaatjes naast elkaar). Daarna ging ik aan de slag met buttons stijlen - margins, hover geven en :before voor de transitie effect. Nadat de mobile layout helemaal klaar was, begon ik met de media queries, aldus twee breakpoints te programmeren. Hieronde staat de CSS code.  
 
+
 <img width="262" alt="image" src="https://github.com/aliceafanasieva/the-startup-responsive-interactieve-website/assets/66431299/5bf3657b-1c3d-4a77-bc10-74020f6e6f4e">
 
 
