@@ -1,15 +1,13 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving
-> uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
+# Uitnodigingspagina Just
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
 ## Beschrijving
 
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+<img width="634" alt="image" src="https://github.com/aliceafanasieva/the-startup-responsive-interactieve-website/assets/66431299/819d801a-753a-4297-bc1d-8371a4310173">
+
+Link naar mijn GitHub pages: https://aliceafanasieva.github.io/the-startup-responsive-interactieve-website/
 
 ## Kenmerken
 
